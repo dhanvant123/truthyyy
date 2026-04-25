@@ -265,10 +265,10 @@ export default function Home() {
       <footer className="relative z-10 border-t border-gray-800 py-12 px-8">
         <div className="max-w-7xl mx-auto text-center">
           <div className="flex items-center justify-center space-x-3 mb-6">
-            <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-cyan-500 transform rotate-6 flex items-center justify-center">
-              <span className="text-white font-bold">T</span>
+            <div className="w-10 h-10 bg-gradient-to-br from-yellow-500 to-orange-500 transform rotate-6 flex items-center justify-center group hover:rotate-12 hover:scale-110 transition-all duration-500">
+              <span className="text-white font-bold group-hover:text-yellow-200 transition-colors">T</span>
             </div>
-            <span className="text-lg font-light tracking-wider text-gray-400">TRUTHYYY</span>
+            <span className="text-lg font-light tracking-wider text-gray-400 group-hover:text-yellow-300 transition-colors">TRUTHYYY</span>
           </div>
           <p className="text-gray-600 text-sm tracking-wide">
             BLOCKCHAIN-SECURED TRUTH PROTOCOLS • ESTABLISHED 2024
@@ -280,6 +280,16 @@ export default function Home() {
         @keyframes gradient-shift {
           0%, 100% { background-position: 0% 50%; }
           50% { background-position: 100% 50%; }
+        }
+        
+        @keyframes mouseUp {
+          0% { transform: translateY(0) scale(1); }
+          50% { transform: translateY(-10px) scale(1.05); }
+          100% { transform: translateY(0) scale(1); }
+        }
+        
+        .mouse-up-animation {
+          animation: mouseUp 0.3s ease-out;
         }
         
         @keyframes morph-1 {

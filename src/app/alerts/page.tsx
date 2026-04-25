@@ -195,56 +195,74 @@ export default function AlertsPage() {
 
   return (
     <div className="min-h-screen bg-[#000] text-white overflow-hidden relative">
-      {/* Unique Geometric Background */}
+      {/* Animated Background with Enhanced Effects */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-black/20 via-transparent to-black/20"></div>
-        {/* Morphing Orbs with Yellow/Orange */}
-        <div className="absolute top-20 left-32 w-72 h-72 bg-gradient-to-br from-yellow-600/40 to-orange-600/40 transform rotate-12 blur-3xl animate-morph-1"></div>
-        <div className="absolute bottom-40 right-20 w-64 h-64 bg-gradient-to-br from-orange-600/40 to-red-600/40 transform -rotate-6 blur-3xl animate-morph-2"></div>
-        <div className="absolute top-1/2 left-1/3 w-56 h-56 bg-gradient-to-br from-amber-600/30 to-yellow-600/30 transform rotate-45 blur-2xl animate-morph-3"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-black via-yellow-950/20 to-orange-950/20"></div>
         
-        {/* Liquid Grid */}
-        <div className="absolute inset-0 opacity-10">
+        {/* Enhanced Morphing Orbs */}
+        <div className="absolute top-20 left-32 w-72 h-72 bg-gradient-to-br from-yellow-500/50 to-orange-500/50 transform rotate-12 blur-3xl animate-morph-1"></div>
+        <div className="absolute bottom-40 right-20 w-64 h-64 bg-gradient-to-br from-orange-500/50 to-red-500/50 transform -rotate-6 blur-3xl animate-morph-2"></div>
+        <div className="absolute top-1/2 left-1/3 w-56 h-56 bg-gradient-to-br from-amber-500/40 to-yellow-500/40 transform rotate-45 blur-2xl animate-morph-3"></div>
+        
+        {/* Floating Alert Symbols */}
+        <div className="absolute top-32 right-40 w-8 h-8 text-yellow-400/30 text-4xl animate-bounce opacity-30">⚠️</div>
+        <div className="absolute bottom-32 left-20 w-6 h-6 text-orange-400/30 text-3xl animate-pulse opacity-25">⚡</div>
+        <div className="absolute top-1/3 right-1/4 w-10 h-10 text-amber-400/30 text-5xl animate-spin opacity-20">⚛</div>
+        
+        {/* Liquid Grid with Enhanced Pattern */}
+        <div className="absolute inset-0 opacity-20">
           <div className="h-full w-full animate-grid-flow" style={{
             backgroundImage: `linear-gradient(60deg, #fbbf24 25%, transparent 25%, transparent 75%, #fbbf24 75%, #fbbf24),
-                            linear-gradient(-60deg, #f97316 25%, transparent 25%, transparent 75%, #f97316 75%, #f97316)`,
-            backgroundSize: '100px 100px, 60px 60px',
-            backgroundPosition: '0 0, 30px 30px'
+                            linear-gradient(-60deg, #f97316 25%, transparent 25%, transparent 75%, #f97316 75%, #f97316),
+                            linear-gradient(120deg, #f59e0b 15%, transparent 85%, #f59e0b 85%, #f59e0b)`,
+            backgroundSize: '120px 120px, 80px 80px, 60px 60px',
+            backgroundPosition: '0 0, 40px 40px, 80px 80px'
           }}></div>
         </div>
       </div>
 
-      {/* Asymmetric Navigation */}
+      {/* Enhanced Navigation with Glow Effects */}
       <nav className="relative z-10 px-8 py-6">
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <Link href="/" className="flex items-center space-x-3">
-            <div className="w-12 h-12 bg-gradient-to-br from-yellow-500 to-orange-500 transform rotate-3 flex items-center justify-center">
-              <span className="text-white font-bold text-xl">T</span>
+        <div className="absolute inset-0 bg-gradient-to-r from-yellow-600/10 to-orange-600/10 blur-xl"></div>
+        <div className="max-w-7xl mx-auto flex items-center justify-between relative">
+          <Link href="/" className="flex items-center space-x-3 group transform hover:scale-105 transition-all duration-500">
+            <div className="w-12 h-12 bg-gradient-to-br from-yellow-500 to-orange-500 transform rotate-3 flex items-center justify-center group-hover:rotate-6 transition-transform duration-500 relative">
+              <div className="absolute inset-0 bg-gradient-to-br from-yellow-400 to-orange-400 rounded-2xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <span className="text-white font-bold text-xl group-hover:text-yellow-200 transition-colors relative z-10">T</span>
             </div>
-            <span className="text-yellow-300 text-sm font-medium tracking-wide">BLOCKCHAIN ALERTS</span>
+            <span className="text-2xl font-light tracking-wider text-gray-400 group-hover:text-yellow-300 group-hover:translate-x-1 transition-all duration-500">TRUTHYYY</span>
           </Link>
           <div className="flex items-center space-x-8">
-            <Link href="/dashboard" className="text-gray-400 hover:text-yellow-400 transition-colors text-sm tracking-wide">DASHBOARD</Link>
-            <Link href="/verify" className="text-gray-400 hover:text-yellow-400 transition-colors text-sm tracking-wide">VERIFY</Link>
+            <Link href="/dashboard" className="text-gray-400 hover:text-yellow-400 transition-colors text-sm tracking-wide group relative overflow-hidden px-4 py-2 rounded-full hover:bg-yellow-500/10">
+              <span className="relative z-10 group-hover:translate-y-1 transform transition-transform">DASHBOARD</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-yellow-600/20 to-orange-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full"></div>
+            </Link>
+            <Link href="/verify" className="text-gray-400 hover:text-yellow-400 transition-colors text-sm tracking-wide group relative overflow-hidden px-4 py-2 rounded-full hover:bg-yellow-500/10">
+              <span className="relative z-10 group-hover:translate-y-1 transform transition-transform">VERIFY</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-yellow-600/20 to-orange-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full"></div>
+            </Link>
           </div>
         </div>
       </nav>
 
       <div className="relative z-10 max-w-7xl mx-auto px-8 py-12">
-        {/* Header */}
+        {/* Enhanced Header with Animated Elements */}
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-16">
           <div className="mb-8 md:mb-0">
             <div className="flex items-center mb-6">
-              <div className="w-20 h-20 bg-gradient-to-br from-yellow-500 to-orange-600 rounded-2xl flex items-center justify-center mr-6 transform rotate-6">
-                <span className="text-4xl">⚠️</span>
+              <div className="relative group">
+                <div className="w-24 h-24 bg-gradient-to-br from-yellow-500 to-orange-600 rounded-2xl flex items-center justify-center mr-6 transform rotate-6 group-hover:rotate-12 group-hover:scale-110 transition-all duration-500">
+                  <div className="absolute inset-0 bg-gradient-to-br from-yellow-400 to-orange-400 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <span className="text-5xl group-hover:scale-110 transition-transform relative z-10 animate-pulse">⚠️</span>
+                </div>
               </div>
               <div>
-                <h1 className="text-5xl md:text-6xl font-light mb-3">
-                  <span className="block bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
+                <h1 className="text-6xl md:text-7xl font-light mb-3">
+                  <span className="block bg-gradient-to-r from-yellow-300 via-orange-300 to-red-400 bg-clip-text text-transparent group-hover:from-yellow-200 group-hover:via-orange-200 group-hover:to-red-300 transition-all duration-1000">
                     BLOCKCHAIN ALERTS
                   </span>
                 </h1>
-                <p className="text-xl text-gray-400 tracking-wide">
+                <p className="text-xl text-gray-400 tracking-wide group-hover:text-gray-300 transition-colors duration-500">
                   Real-time blockchain corruption monitoring
                 </p>
               </div>
@@ -284,37 +302,37 @@ export default function AlertsPage() {
           </div>
         </div>
 
-        {/* Stats Cards */}
+          {/* Enhanced Stats Cards with 3D Effects */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
-          <div className="group relative transform hover:rotate-3 transition-transform duration-500">
-            <div className="absolute inset-0 bg-gradient-to-br from-red-600/20 to-orange-600/20 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            <div className="relative bg-[#030712] border border-red-500/20 rounded-3xl p-8">
-              <div className="text-4xl font-light text-red-400 mb-2 group-hover:scale-110 transition-transform">{stats.critical}</div>
-              <div className="text-sm text-gray-500 tracking-wide">BLOCKCHAIN CRITICAL</div>
+          <div className="group relative transform hover:rotate-3 hover:scale-105 transition-all duration-700">
+            <div className="absolute inset-0 bg-gradient-to-br from-red-600/30 to-orange-600/30 rounded-3xl blur-2xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+            <div className="relative bg-[#030712] border border-red-500/30 rounded-3xl p-8 backdrop-blur-xl transform hover:rotate-1 transition-all duration-700">
+              <div className="text-5xl font-light text-red-400 mb-2 group-hover:scale-110 group-hover:text-red-300 transition-all duration-500 animate-pulse">{stats.critical}</div>
+              <div className="text-sm text-gray-500 tracking-wide group-hover:text-gray-400 transition-colors duration-500">BLOCKCHAIN CRITICAL</div>
             </div>
           </div>
           
-          <div className="group relative transform hover:-rotate-3 transition-transform duration-500">
-            <div className="absolute inset-0 bg-gradient-to-br from-orange-600/20 to-yellow-600/20 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            <div className="relative bg-[#030712] border border-orange-500/20 rounded-3xl p-8">
-              <div className="text-4xl font-light text-orange-400 mb-2 group-hover:scale-110 transition-transform">{stats.high}</div>
-              <div className="text-sm text-gray-500 tracking-wide">BLOCKCHAIN HIGH</div>
+          <div className="group relative transform hover:-rotate-3 hover:scale-105 transition-all duration-700">
+            <div className="absolute inset-0 bg-gradient-to-br from-orange-600/30 to-yellow-600/30 rounded-3xl blur-2xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+            <div className="relative bg-[#030712] border border-orange-500/30 rounded-3xl p-8 backdrop-blur-xl transform hover:-rotate-1 transition-all duration-700">
+              <div className="text-5xl font-light text-orange-400 mb-2 group-hover:scale-110 group-hover:text-orange-300 transition-all duration-500 animate-pulse">{stats.high}</div>
+              <div className="text-sm text-gray-500 tracking-wide group-hover:text-gray-400 transition-colors duration-500">BLOCKCHAIN HIGH</div>
             </div>
           </div>
           
-          <div className="group relative transform hover:rotate-6 transition-transform duration-500">
-            <div className="absolute inset-0 bg-gradient-to-br from-yellow-600/20 to-amber-600/20 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            <div className="relative bg-[#030712] border border-yellow-500/20 rounded-3xl p-8">
-              <div className="text-4xl font-light text-yellow-400 mb-2 group-hover:scale-110 transition-transform">{stats.medium}</div>
-              <div className="text-sm text-gray-500 tracking-wide">BLOCKCHAIN MEDIUM</div>
+          <div className="group relative transform hover:rotate-6 hover:scale-105 transition-all duration-700">
+            <div className="absolute inset-0 bg-gradient-to-br from-yellow-600/30 to-amber-600/30 rounded-3xl blur-2xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+            <div className="relative bg-[#030712] border border-yellow-500/30 rounded-3xl p-8 backdrop-blur-xl transform hover:rotate-1 transition-all duration-700">
+              <div className="text-5xl font-light text-yellow-400 mb-2 group-hover:scale-110 group-hover:text-yellow-300 transition-all duration-500 animate-pulse">{stats.medium}</div>
+              <div className="text-sm text-gray-500 tracking-wide group-hover:text-gray-400 transition-colors duration-500">BLOCKCHAIN MEDIUM</div>
             </div>
           </div>
           
-          <div className="group relative transform hover:-rotate-6 transition-transform duration-500">
-            <div className="absolute inset-0 bg-gradient-to-br from-purple-600/20 to-pink-600/20 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            <div className="relative bg-[#030712] border border-purple-500/20 rounded-3xl p-8">
-              <div className="text-4xl font-light text-purple-400 mb-2 group-hover:scale-110 transition-transform">{stats.affectedUsers}</div>
-              <div className="text-sm text-gray-500 tracking-wide">USERS AFFECTED</div>
+          <div className="group relative transform hover:-rotate-6 hover:scale-105 transition-all duration-700">
+            <div className="absolute inset-0 bg-gradient-to-br from-purple-600/30 to-pink-600/30 rounded-3xl blur-2xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+            <div className="relative bg-[#030712] border border-purple-500/30 rounded-3xl p-8 backdrop-blur-xl transform hover:-rotate-1 transition-all duration-700">
+              <div className="text-5xl font-light text-purple-400 mb-2 group-hover:scale-110 group-hover:text-purple-300 transition-all duration-500 animate-pulse">{stats.affectedUsers}</div>
+              <div className="text-sm text-gray-500 tracking-wide group-hover:text-gray-400 transition-colors duration-500">USERS AFFECTED</div>
             </div>
           </div>
         </div>
